@@ -27,7 +27,7 @@ class Anagram
   else
     return "please enter words"
   end
-end
+  end
   def anagram_check(input1, input2)
     puts @input
     if @input1.upcase.chars.sort.join == @input2.upcase.chars.sort.join
@@ -38,7 +38,11 @@ end
 
   end
 
-end
+  end
+  def antigram_check(input1, input2)
+
+  end
+
 end
 
 
