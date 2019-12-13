@@ -9,11 +9,15 @@ describe('#project') do
   end
 
   it("should return it's an anagram if true") do
+    anagram = Anagram.new("ruby", "bury")
+    expect(anagram.anagram_check("ruby", "bury")).to(eq(true))
+  end
+  it("should return it's an anagram if true regardless of case") do
     anagram = Anagram.new("ruby", "Bury")
     expect(anagram.anagram_check("ruby", "Bury")).to(eq(true))
   end
   it("should return true if it is an antigram") do
-    anagram = Anagram.new("ruby", "bry")
+    anagram = Anagram.new("hi", "eat")
     expect(anagram.antigram_check("hi", "eat")).to(eq(true))
   end
 
