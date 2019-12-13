@@ -30,7 +30,7 @@ class Anagram
 end
   def anagram_check(input1, input2)
     puts @input
-    if @input1.chars.sort.join == @input2.chars.sort.join
+    if @input1.upcase.chars.sort.join == @input2.upcase.chars.sort.join
       return true
     else
       return "not and anagram"

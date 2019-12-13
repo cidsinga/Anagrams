@@ -9,8 +9,8 @@ describe('#project') do
   end
 
   it("should return it's an anagram if true") do
-    anagram = Anagram.new("ruby", "bry")
-    expect(anagram.anagram_check("ruby", "bry")).to(eq(true))
+    anagram = Anagram.new("ruby", "Bury")
+    expect(anagram.anagram_check("ruby", "Bury")).to(eq(true))
   end
 
 end
