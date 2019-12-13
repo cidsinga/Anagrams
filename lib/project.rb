@@ -13,10 +13,14 @@ class Anagram
   def vowel_check(input1, input2)
     if
       @input1.include? "a"
-    elsif @input1.include? "e"
     elsif @input1.include? "i"
+      return true
+    elsif @input1.include? "e"
+      return true
     elsif @input1.include? "o"
+      return true
     elsif @input1.include? "u"
+      return true
     elsif @input1.include? "y"
     # @input1.scan(/[aeiou]/) && @input2.scan(/[aeiou]/) == true
     return true
@@ -36,5 +40,6 @@ class Anagram
 end
 end
 end
+
 
     # anagram = Anagram.new("ruby", "bury")
