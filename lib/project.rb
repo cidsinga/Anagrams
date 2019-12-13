@@ -27,8 +27,9 @@ class Anagram
   else
     return "please enter words"
   end
-
+end
   def anagram_check(input1, input2)
+    puts @input
     if @input1.chars.sort.join == @input2.chars.sort.join
       return true
     else
@@ -39,7 +40,7 @@ class Anagram
 
 end
 end
-end
 
 
-    # anagram = Anagram.new("ruby", "bury")
+
+    anagram = Anagram.new("ruby", "bury")
