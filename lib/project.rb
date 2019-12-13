@@ -40,16 +40,15 @@ class Anagram
 
   end
   def antigram_check(input1, input2)
-    if @input1.chars.include? /#{[@input2.chars]}/
-      return "This is not an antigram"
-    else
-      "This is an antigram"      
-    end
+    @regex = /#{[@input2]}/
+    puts @regex
 
+
+    @input1.chars.include? /#{[@input2]}/
   end
 
 end
 
 
 
-    anagram = Anagram.new("ruby", "bury")
+    anagram = Anagram.new('ruby', 'bury')
