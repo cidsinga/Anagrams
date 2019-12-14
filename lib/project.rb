@@ -1,13 +1,14 @@
 # !/usr/bin/ruby
-# psudo code - take 2 inputs
-# ensure that they are words by if they have vowels
-# compare char length - if != they're not anagrams--- unnecesary
-# if so sort letters and compare to uppercase
-
 class Anagram
   def initialize(input1, input2)
     @input1 = input1
     @input2 = input2
+  end
+  def phrase_check(input1, input2)
+    @input1 = @input1.upcase.gsub!(/[^0-9A-Za-z]/, '')
+    @input2 = @input2.upcase.gsub!(/[^0-9A-Za-z]/, '')
+    print @input1
+    print @input2
   end
   def vowel_check(input1, input2)
     if
@@ -28,22 +29,19 @@ class Anagram
   end
   end
   def anagram_check(input1, input2)
-    puts @input
     if @input1.upcase.chars.sort.join == @input2.upcase.chars.sort.join
-      return true
+      return "this is an anagram"
     else
-      return "not and anagram"
-
-
+      return "not an anagram"
   end
-
   end
   def antigram_check(input1, input2)
-    @gram_check = @input1.scan(/#{[@input2]}/)
+    @gram_check = @input1.upcase.scan(/#{[@input2]}/)
     return @gram_check[0].nil?
   end
-
 end
+
+
 
 
     #
