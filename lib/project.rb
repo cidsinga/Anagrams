@@ -9,7 +9,6 @@ class Anagram
     @input1 = input1
     @input2 = input2
   end
-
   def vowel_check(input1, input2)
     if
       @input1.include? "a"
@@ -40,15 +39,12 @@ class Anagram
 
   end
   def antigram_check(input1, input2)
-    @regex = /#{[@input2]}/
-    puts @regex
-
-
-    @input1.chars.include? /#{[@input2]}/
+    @gram_check = @input1.scan(/#{[@input2]}/)
+    return @gram_check[0].nil?
   end
 
 end
 
 
-
-    anagram = Anagram.new('ruby', 'bury')
+    #
+    # anagram = Anagram.new('ruby', 'bury')

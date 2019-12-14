@@ -17,8 +17,8 @@ describe('#project') do
     expect(anagram.anagram_check('ruby', 'Bury')).to(eq(true))
   end
   it('should return true if it is an antigram') do
-    anagram = Anagram.new('hi', 'eiat')
-    expect(anagram.antigram_check('hi', 'eiat')).to(eq(true))
+    anagram = Anagram.new('hi', 'eat')
+    expect(anagram.antigram_check('hi', 'eat')).to(eq(true))
   end
 
 end
